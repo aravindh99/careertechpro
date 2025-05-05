@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Phone: " . $_POST["phone"] . "\n";
     $message .= "Message:\n" . $_POST["message"];
     $headers = "From: contact@yourdomain.com\r\n";
-$headers .= "Reply-To: " . $_POST["email"] . "\r\n";
+    $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
         echo "Message sent successfully!";
